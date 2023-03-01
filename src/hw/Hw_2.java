@@ -26,19 +26,25 @@ public class Hw_2 {
         int mod_a_div_b = a % b;
         System.out.println("remainder of division: a / b = " + mod_a_div_b);
 
-        if (a % 2 == 0)
+        if (a % 2 == 0) {
             System.out.println("a - even");
-        if (a % 2 != 0)
+        }
+        if (a % 2 != 0) {
             System.out.println("a - odd");
+        }
 
-        if (b % 2 == 0)
+        if (b % 2 == 0) {
             System.out.println("b - even");
-        if (b % 2 != 0)
+        }
+        if (b % 2 != 0) {
             System.out.println("b - odd");
+        }
 
 //    3
 
         System.out.println("☺");
+//  или
+        System.out.println("\uD83D\uDE00");
 
     }
 }

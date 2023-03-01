@@ -17,7 +17,7 @@ public class Lesson_2 {
         boolean b_1 = true;
         boolean b_2 = false;
 
-        char symbol = 'a'; // always 1 symbol in char but digit (number of symbol) - code for 'a' is 97
+        char symbol = 'a'; // always 1 symbol in char work digit (number of symbol) - code for 'a' is 97
         int some = 1;
         System.out.println(symbol + some);
 
