@@ -8,6 +8,8 @@ public class Lesson_3 {
         int c = 2 + 1;
         System.out.println(b + c);
 
+//        if else
+
         if (1 == 2) {
             System.out.println("они равны");
         }
@@ -27,6 +29,22 @@ public class Lesson_3 {
         if (b < a) {
             System.out.println("a - четное");
         }
+
+//        Цикл for
+
+//        иницилализация int i = 1
+//        проверка i <- 5 - тут если условие тру - цикл выполняется
+//        изменения переменной (шаг) в конце цикла
+
+            for (int i = 1; i <= 5; i = i + 1){
+                System.out.println(i);
+                int q = 5;
+        }
+
+//            если только ВНУТРИ цикла есть переменная, то ее не будет снаружи
+
+        System.out.println(i);
+        System.out.println(q);
 
     }
 }
