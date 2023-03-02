@@ -29,10 +29,9 @@ public class Lesson_3 {
             System.out.println("a - четное");
         } else if (a == 9) {
                 System.out.println("a == 9");
-            }
-        else if (a != 0) {
+        } else if (a != 0) {
                 System.out.println("a != 9");
-            }
+        }
 
 //      Операторы сравнения
 //      a > b
