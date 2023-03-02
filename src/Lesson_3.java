@@ -16,7 +16,23 @@ public class Lesson_3 {
 
         if (a % 2 == 0) {
             System.out.println("a - четное");
+        } else {
+            System.out.println("a - нечетное");
+            if (a == 9) {
+                System.out.println("a == 9");
+            } else {
+                System.out.println("a != 9");
+            }
         }
+
+        if (a % 2 == 0) {
+            System.out.println("a - четное");
+        } else if (a == 9) {
+                System.out.println("a == 9");
+            }
+        else if (a != 0) {
+                System.out.println("a != 9");
+            }
 
 //      Операторы сравнения
 //      a > b
@@ -27,7 +43,7 @@ public class Lesson_3 {
 //      a <= b
 
         if (b < a) {
-            System.out.println("a - четное");
+            System.out.println("b < a");
         }
 
 //        Цикл for
@@ -41,10 +57,23 @@ public class Lesson_3 {
                 int q = 5;
         }
 
-//            если только ВНУТРИ цикла есть переменная, то ее не будет снаружи
+//        Если только ВНУТРИ цикла ИНИЦИАЛИЗИРОВАТЬ переменную или внутри IF, то ее не будет снаружи (закомментил ниже)
+//        Или внутри блока кода - внути скобок {}
 
+//        System.out.println(i);
+//        System.out.println(q);
+
+        if (1 > 2) {
+            int i = 5;
+        }
+
+//        System.out.println(i);
+//        Но если инициализирована раньше, то норм переприсвоит значение:
+        int i = 5;
+        if (1 < 2) {
+            i = 10;
+        }
         System.out.println(i);
-        System.out.println(q);
 
         System.out.println( " true && false = " + ( true && false));
         System.out.println( " true && true  = " + ( true && true));
@@ -60,6 +89,15 @@ public class Lesson_3 {
         System.out.println("=========================================");
         System.out.println( "!false = " + (!false));
         System.out.println( "!true = "  + (!true));
+
+//        у И (&&) больший приоритет, чем у ИЛИ (||)
+
+//  Лучше сравнивать числа с одинаковым типом
+
+        if (1 == 1.0) {
+            System.out.println("1 == 1.0");
+
+        }
 
     }
 }
