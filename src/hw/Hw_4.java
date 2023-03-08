@@ -37,7 +37,7 @@ public class Hw_4 {
 
 //        3.1
 
-        for (int i = 40; i < 61; i = i + 1) {
+        for (int i = 40; i <= 60; i = i + 1) {
             if (i % 4 == 0) {
                 System.out.println("3 задача для 1 варианта " + i);
             }
