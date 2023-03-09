@@ -40,7 +40,7 @@ public class Hw_5 {
 //        System.out.println("=================3==================");
 
         String space = " ";
-        int spaces = 1;
+        int spaces = 2;
         int rows = 10;
         int min_columns = -9;
         int columns = 10;
@@ -49,7 +49,7 @@ public class Hw_5 {
                 System.out.print(Math.abs(j) + " ");
             }
             System.out.print("\n" + space.repeat(spaces));
-            spaces++;
+            spaces+=2;
             columns--;
             min_columns++;
         }
