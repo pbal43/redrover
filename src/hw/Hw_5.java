@@ -42,14 +42,16 @@ public class Hw_5 {
         String space = " ";
         int spaces = 1;
         int rows = 10;
+        int min_columns = -9;
         int columns = 10;
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                System.out.print(j + " ");
+            for (int j = min_columns; j < columns; j++) {
+                System.out.print(Math.abs(j) + " ");
             }
             System.out.print("\n" + space.repeat(spaces));
             spaces++;
             columns--;
+            min_columns++;
         }
 
     }
