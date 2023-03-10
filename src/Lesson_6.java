@@ -198,5 +198,19 @@ public class Lesson_6 {
 
 //        ДЛЯ СРАВНЕНИЯ ЗНАЧЕНИЙ ОБЪЕКТА НУЖНО ИСПОЛЬЗОВАТЬ EQUAL, == - только для сравнения самих объектов
 
+//        Пройти массив с конца до начала
+
+        int[] arr_j = {1, 5, 6, 8, 10, 2};
+        for (int i = arr_j.length - 1; i >= 0; i--) {
+            System.out.println(arr_j[i]);
+        }
+
+        // или (дичь устаревшая)
+
+        int[] arr_j_2 = {1, 5, 6, 8, 10, 2};
+        for (int i = arr_j_2.length; --i >= 0; ) {
+            System.out.println(arr_j_2[i]);
+        }
+
     }
 }
