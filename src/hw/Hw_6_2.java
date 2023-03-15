@@ -73,5 +73,31 @@ public class Hw_6_2 {
         }
         System.out.println(counter_extra);
 
+//        или
+
+        String[][] array_extra_1 = {{"Привет", "всем", "кто"}, {"изучает", "язык", "программирования"}, {"java"}};
+        int counter_extra_1 = 0;
+        for (int i = 0; i < array_extra_1.length; i++) {
+            for (int j = 0; j < array_extra_1[i].length; j++) {
+                if (!array_extra_1[i][j].contains("е")) {
+                    counter_extra_1++;
+                }
+            }
+        }
+        System.out.println(counter_extra_1);
+
+//        или
+
+        String[][] array_extra_2 = {{"Привет", "всем", "кто"}, {"изучает", "язык", "программирования"}, {"java"}};
+        int counter_extra_2 = 0;
+        for (int i = 0; i < array_extra_2.length; i++) {
+            for (int j = 0; j < array_extra_2[i].length; j++) {
+                if ((array_extra_2[i][j].indexOf('е')) == -1) {
+                    counter_extra_2++;
+                }
+            }
+        }
+        System.out.println(counter_extra_2);
+
     }
 }
