@@ -30,14 +30,43 @@ public class Hw_7 {
 
         System.out.println("===========3===========");
 
+        Employee_hw_7 employee_3 = new Employee_hw_7();
+        employee_3.salary = 228;
 
+        Employee_hw_7 employee_4 = new Employee_hw_7();
+        employee_4.salary = 228.5;
 
+        Employee_hw_7 employee_5 = new Employee_hw_7();
+
+        Salary_hw_7 salaries = new Salary_hw_7();
+
+        Employee_hw_7[] empls = {employee_3, employee_4, employee_5};
+
+        double sum_salaries = salaries.getSum(empls);
+
+        System.out.println(sum_salaries);
 
         //    4
 
         System.out.println("===========4===========");
 
-
+//        public class Cube{
+//
+//            //create a class member integers called "side"
+//            private int Side;
+//
+//            // Get method
+//            public int getSide() {
+//                return Side;
+//            }
+//
+//            //set method
+//            public void setSide(int num){
+//                this.Side = num;
+//            }
+//
+//
+//        }
 
         //    5
 
