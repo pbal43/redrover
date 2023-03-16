@@ -72,13 +72,137 @@ public class Hw_7 {
 
         System.out.println("===========5===========");
 
+//        public class Block{
+//
+//            int width;
+//
+//            int lenght;
+//
+//            int height;
+//
+//            public Block(int[] array) {
+//                this.width = array[0];
+//                this.lenght = array[1];
+//                this.height = array[2];
+//            }
+//
+//            int getWidth() {
+//                return width;
+//            }
+//
+//            int getLength() {
+//                return lenght;
+//            }
+//
+//            int getHeight() {
+//                return height;
+//            }
+//
+//            int getVolume() {
+//                return width * lenght * height;
+//            }
+//
+//            int getSurfaceArea() {
+//                return 2 * (width * lenght + width * height + lenght * height);
+//            }
+//
+//        }
+
+
+//        или
+
+//        public class Block{
+//            private int width;
+//            private int length;
+//            private int height;
+//            private int volume;
+//            private int surface_area;
+//
+//            // Constructor
+//            public Block(int[] params) {
+//                width = params[0];
+//                length = params[1];
+//                height = params[2];
+//
+//                volume = width * length * height;
+//                surface_area = 2 * (width * length + width * height + length * height);
+//            }
+//
+//            public int getWidth() {
+//                return width;
+//            }
+//
+//            public int getLength() {
+//                return length;
+//            }
+//
+//            public int getHeight() {
+//                return height;
+//            }
+//
+//            public int getVolume() {
+//                return volume;
+//            }
+//
+//            public int getSurfaceArea() {
+//                return surface_area;
+//            }
+//        }
 
 
         //    Extra
 
         System.out.println("===========Extra===========");
 
-
+//        public class fighters {
+//            public void main(String[] args) {
+//
+//                hw.hw_7.fighters.Kata kata = new hw.hw_7.fighters.Kata();
+//
+//                hw.hw_7.fighters.Fighter lew = new hw.hw_7.fighters.Fighter("Lew", 10, 2);
+//
+//                hw.hw_7.fighters.Fighter harry = new hw.hw_7.fighters.Fighter("Harry", 5, 4);
+//
+//                String a = kata.declareWinner(lew, harry, "Lew");
+//
+//                System.out.println(a);
+//            }
+//
+//            public class Fighter {
+//                public String name;
+//                public int health, damagePerAttack;
+//
+//                public Fighter(String name, int health, int damagePerAttack) {
+//                    this.name = name;
+//                    this.health = health;
+//                    this.damagePerAttack = damagePerAttack;
+//                }
+//            }
+//
+//            public class Kata {
+//                public static String declareWinner(hw.hw_7.fighters.Fighter fighter1, hw.hw_7.fighters.Fighter fighter2, String firstAttacker) {
+//                    int counter;
+//                    if (fighter1.name.equals(firstAttacker)) {
+//                        counter = 1;
+//                    } else {
+//                        counter = 2;
+//                    }
+//                    while (fighter1.health > 0 && fighter2.health > 0) {
+//                        if (counter % 2 != 0) {
+//                            fighter2.health -= fighter1.damagePerAttack;
+//                        } else {
+//                            fighter1.health -= fighter2.damagePerAttack;
+//                        }
+//                        counter++;
+//                    }
+//                    if (counter % 2 != 0) {
+//                        return fighter2.name;
+//                    } else {
+//                        return fighter1.name;
+//                    }
+//                }
+//            }
+//        }
 
     }
 
