@@ -52,8 +52,14 @@ public class Hw_8 {
         System.out.println(employee2_2);
 
 
-        Employee_2 ik = Utils_2.searchBySubstring(employeeArray, "ik"); // так как для всех 3 - сработает по 1 вхождению (как и в прошлой задаче_
+        Employee_2 ik = Utils_2.searchBySubstring(employeeArray, "ik"); // так как для всех 3 есть
+        // указанная подстрока - сработает по 1 вхождению (как и в прошлой задаче)
         System.out.println(ik.getName());
 
+        System.out.println("Вывод имен всех объектов (работников) с подстрокой");
+        Employee_2[] k = Utils_2.searchBySubstringAll(employeeArray, "ik"); // получили все объекты с подстрокой в имени
+        for (int i = 0; i < k.length; i++) {
+            System.out.println(k[i].getName()); // вывели имена всех объектов с подстрокой
+        }
     }
 }
