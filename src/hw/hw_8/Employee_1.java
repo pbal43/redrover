@@ -1,6 +1,6 @@
 package hw.hw_8;
 
-public class Manager {
+public class Employee_1 {
 
     private String name;
 
@@ -9,8 +9,6 @@ public class Manager {
     private String sex;
 
     private double daily_salary;
-
-    private int count_employees;
 
     public String getName() {
         return name;
@@ -26,10 +24,6 @@ public class Manager {
 
     public double getDaily_salary() {
         return daily_salary;
-    }
-
-    public int getCount_employees() {
-        return count_employees;
     }
 
     public void setName(String name) {
@@ -48,13 +42,8 @@ public class Manager {
         this.daily_salary = daily_salary;
     }
 
-    public void setCount_employees(int count_employees) {
-        this.count_employees = count_employees;
-    }
-
     double getSalary(int days) {
-        return days * ((daily_salary) + (daily_salary / 100 * count_employees));
+        return (daily_salary * days);
     }
-
 
 }

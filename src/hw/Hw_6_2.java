@@ -66,7 +66,7 @@ public class Hw_6_2 {
         int counter_extra = 0;
         for (int i = 0; i < array_extra.length; i++) {
             for (int j = 0; j < array_extra[i].length; j++) {
-                if ((array_extra[i][j].contains("е")) == false) {
+                if ((array_extra[i][j].contains("е")) == false) { // поиск подстроки
                     counter_extra++;
                 }
             }
