@@ -30,12 +30,15 @@ public class Utils_2 {
     // изменим предыдущий метод, чтобы выдавал все вхождения
     static Employee_2[] searchBySubstringAll(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
         List new_array_list = new ArrayList<>();
+//        int counter = 0;
         for (int i = 0; i < employeeArray.length; i++) {
             if (employeeArray[i].getName().toLowerCase().contains(Substring.toLowerCase())) {
                 new_array_list.add(employeeArray[i]);
+//                counter++;
             }
         }
-        Employee_2[] for_return = new Employee_2[0];
+//        Employee_2[] for_return = new Employee_2[counter];
+        Employee_2[] for_return = new Employee_2[0]; // почему с 0 объемом тоже работает (особенность метода?)
         return (Employee_2[]) new_array_list.toArray(for_return);
     }
 
