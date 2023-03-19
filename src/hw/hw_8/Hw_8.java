@@ -62,12 +62,6 @@ public class Hw_8 {
             System.out.println(k[i].getName()); // вывели имена всех объектов с подстрокой
         }
 
-//        int[] test = new int[2]; // тут есть ограничение по объему массива, а в методе обходится
-//        for (int i = 0; i < 4; i++) {
-//            test[i] = i;
-//            System.out.println(test[i]);
-//        }
-
 
     }
 }

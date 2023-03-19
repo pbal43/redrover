@@ -37,9 +37,10 @@ public class Utils_2 {
 //                counter++;
             }
         }
-//        Employee_2[] for_return = new Employee_2[counter];
-        Employee_2[] for_return = new Employee_2[0]; // почему с 0 объемом тоже работает (особенность метода?)
-        return (Employee_2[]) new_array_list.toArray(for_return);
+        Employee_2[] for_return = (Employee_2[]) new_array_list.toArray(new Employee_2[0]); // почему с 0 объемом тоже работает?
+        // Особенность метода (создаст новый массив), а если массив больше - заполнит недостающие значения null'ами
+//        return (Employee_2[]) new_array_list.toArray(new Employee_2[counter]); можно закомментить 2 последних авктивных строки и расскомментить остальное
+        return for_return;
     }
 
 }
