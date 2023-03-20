@@ -80,7 +80,7 @@ public class Utils_2 {
             }
         }
 //        if (min_salary == Double.MAX_VALUE) { // как сделать ретерн другого вида если зп ни у кого? надо изучать Дженерики
-//        } // но Java защищает от этого, если зп нет, то ее значение 0.0, поэтому не вернет Double.MAX_VALUE ?? Вернем 0 сами в данном случае
+//        } // но Java защищает от этого, если зп нет, то ее значение 0.0, поэтому не вернет Double.MAX_VALUE но не работает с MIN_VALUE?? Вернем 0 сами в данном случае
         if (min_salary == Double.MAX_VALUE) {
             return 0.0;
         } else {
@@ -91,18 +91,52 @@ public class Utils_2 {
 //    * поиск наибольшей зарплаты в массиве
 
     static double searchMaxSalary(Employee_2[] employeeArray) {
-        double max_salary = Double.MIN_VALUE;
+        double max_salary = 0.0; // меньше 0 не мб
         for (int i = 0; i < employeeArray.length; i++) {
             if (max_salary < employeeArray[i].getBaseSalary()) {
                 max_salary = employeeArray[i].getBaseSalary();
             }
         }
-        if (max_salary == Double.MIN_VALUE) {
-            return 0.0;
+        return max_salary;
+    }
+
+//    * поиск наименьшего количества подчиненных в массиве менеджеров ТЕСТЫ ОТСЮДА
+
+    static int searchMinNumberOfSubordinates(Manager_2[] managerArray) {
+        int min_subordinates = Integer.MAX_VALUE;
+        for (int i = 0; i < managerArray.length; i++) {
+            if (min_subordinates > managerArray[i].getNumberOfSubordinates()) {
+                min_subordinates = managerArray[i].getNumberOfSubordinates();
+            }
+        }
+        if (min_subordinates == Integer.MAX_VALUE) {
+            return 0;
         } else {
-            return max_salary;
+            return min_subordinates;
         }
     }
+
+//    * поиск наибольшего количества подчиненных в массиве менеджеров
+
+    static int searchNumberOfSubordinates(Manager_2[] managerArray) {
+        int max_subordinates = 0; // меньше 0 не мб
+        for (int i = 0; i < managerArray.length; i++) {
+            if (max_subordinates < managerArray[i].getNumberOfSubordinates()) {
+                max_subordinates = managerArray[i].getNumberOfSubordinates();
+            }
+        }
+        return max_subordinates;
+    }
+
+
+//    * поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
+//    тут изначально мб реализовать метод для расчета надбавки, но сделаем так как просят
+
+
+
+
+
+//    * поиск наименьшей надбавки (разнице между базовой ставки и зарплатой) в массиве менеджеров
 
 
 
