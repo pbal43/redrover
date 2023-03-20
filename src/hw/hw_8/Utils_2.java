@@ -52,7 +52,7 @@ public class Utils_2 {
 
     static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
         double salary_all = 0.0;
-        if (employeeArray != null) { // надо бы учесть null в массиве
+        if (employeeArray != null) { // надо бы учесть null-массив
             for (int i = 0; i < employeeArray.length; i++) { // тут если поле не заполнено с зп, ошибки не будет (возьмет 0)
                 salary_all += (employeeArray[i].getBaseSalary());
             }
