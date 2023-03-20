@@ -53,7 +53,7 @@ public class Utils_2 {
     static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
         double salary_all = 0.0;
         if (employeeArray != null) { // надо бы учесть null в массиве
-            for (int i = 0; i < employeeArray.length; i++) { // тут если поле не заполнено с зп, ошибки не будет
+            for (int i = 0; i < employeeArray.length; i++) { // тут если поле не заполнено с зп, ошибки не будет (возьмет 0)
                 salary_all += (employeeArray[i].getBaseSalary());
             }
         }
@@ -80,10 +80,29 @@ public class Utils_2 {
             }
         }
 //        if (min_salary == Double.MAX_VALUE) { // как сделать ретерн другого вида если зп ни у кого? надо изучать Дженерики
-//        } // но Java защищает от этого, если зп нет, то ее значение 0.0, поэтому не вернет Double.MAX_VALUE
-        return min_salary;
+//        } // но Java защищает от этого, если зп нет, то ее значение 0.0, поэтому не вернет Double.MAX_VALUE ?? Вернем 0 сами в данном случае
+        if (min_salary == Double.MAX_VALUE) {
+            return 0.0;
+        } else {
+            return min_salary;
+        }
     }
 
+//    * поиск наибольшей зарплаты в массиве
+
+    static double searchMaxSalary(Employee_2[] employeeArray) {
+        double max_salary = Double.MIN_VALUE;
+        for (int i = 0; i < employeeArray.length; i++) {
+            if (max_salary < employeeArray[i].getBaseSalary()) {
+                max_salary = employeeArray[i].getBaseSalary();
+            }
+        }
+        if (max_salary == Double.MIN_VALUE) {
+            return 0.0;
+        } else {
+            return max_salary;
+        }
+    }
 
 
 

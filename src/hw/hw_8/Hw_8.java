@@ -69,10 +69,9 @@ public class Hw_8 {
 
         employee2_1.setBaseSalary(100.0);
         double min_salary = Utils_2.searchMinSalary(employeeArray);
-
         System.out.println("min_salary = " + min_salary); // 0, так как зп 2_3 работника не установлена
-        employee2_3.setBaseSalary(101.0);
 
+        employee2_3.setBaseSalary(101.0); // установили зп
         double min_salary_1 = Utils_2.searchMinSalary(employeeArray);
         System.out.println("min_salary = " + min_salary_1);
 
@@ -80,7 +79,13 @@ public class Hw_8 {
         Employee_2 employee2_5 = new Employee_2();
         Employee_2[] employeeArray_1 = {employee2_4, employee2_5};
         double min_salary_2 = Utils_2.searchMinSalary(employeeArray_1);
-        System.out.println(min_salary_2);
+        System.out.println("min_salary_2 " + min_salary_2);
+
+        double max_salary_1 = Utils_2.searchMaxSalary(employeeArray);
+        System.out.println("max_salary_1 " + max_salary_1);
+
+        double max_salary_2 = Utils_2.searchMaxSalary(employeeArray_1);
+        System.out.println("max_salary_2 " + max_salary_2);
 
 
     }
