@@ -32,7 +32,7 @@ public class Hw_8 {
         System.out.println(director2.getSalaryDirector());
 
 //        3
-        System.out.println("=====2.1 - 2.2=====");
+        System.out.println("=====3=====");
         Employee_2 employee2_1 = new Employee_2();
         Employee_2 employee2_2 = new Employee_2();
         Employee_2 employee2_3 = new Employee_2();
@@ -61,6 +61,26 @@ public class Hw_8 {
         for (int i = 0; i < k.length; i++) {
             System.out.println(k[i].getName()); // вывели имена всех объектов с подстрокой
         }
+
+        double all_salary = Utils_2.calculateSalary(null, null, null);
+        System.out.println("Калькуляция общего бюджета на оплату труда " + all_salary); // будет 0.0 - зп 0 для null'ов
+        double all_salary_1 = Utils_2.calculateSalary(employeeArray, null, null);
+        System.out.println("Калькуляция общего бюджета на оплату труда " + all_salary_1);
+
+        employee2_1.setBaseSalary(100.0);
+        double min_salary = Utils_2.searchMinSalary(employeeArray);
+
+        System.out.println("min_salary = " + min_salary); // 0, так как зп 2_3 работника не установлена
+        employee2_3.setBaseSalary(101.0);
+
+        double min_salary_1 = Utils_2.searchMinSalary(employeeArray);
+        System.out.println("min_salary = " + min_salary_1);
+
+        Employee_2 employee2_4 = new Employee_2();
+        Employee_2 employee2_5 = new Employee_2();
+        Employee_2[] employeeArray_1 = {employee2_4, employee2_5};
+        double min_salary_2 = Utils_2.searchMinSalary(employeeArray_1);
+        System.out.println(min_salary_2);
 
 
     }

@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Utils_2 {
 
+    // * поиск сотрудника в массиве по его имени
+
     // сработает по 1 вхождению
     static Employee_2 searchByName(Employee_2[] employeeArray, String name) { // сделал статик, чтобы не вызывать экземпляр класса
         for (int i = 0; i < employeeArray.length; i++) {
@@ -16,6 +18,8 @@ public class Utils_2 {
         }
         return null;
     }
+
+    // * поиск сотрудника в массиве по вхождению указанной строки в его имени
 
     // сработает по 1 вхождению
     static Employee_2 searchBySubstring(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
@@ -39,8 +43,48 @@ public class Utils_2 {
         }
         Employee_2[] for_return = (Employee_2[]) new_array_list.toArray(new Employee_2[0]); // почему с 0 объемом тоже работает?
         // Особенность метода (создаст новый массив), а если массив больше - заполнит недостающие значения null'ами
-//        return (Employee_2[]) new_array_list.toArray(new Employee_2[counter]); можно закомментить 2 последних авктивных строки и расскомментить остальное
+//        return (Employee_2[]) new_array_list.toArray(new Employee_2[counter]);
+//        можно закомментить 2 последних авктивных строки и расскомментить остальное
         return for_return;
     }
+
+    // * подсчет зарплатного бюджета для всех сотрудников в массиве
+
+    static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
+        double salary_all = 0.0;
+        if (employeeArray != null) { // надо бы учесть null в массиве
+            for (int i = 0; i < employeeArray.length; i++) { // тут если поле не заполнено с зп, ошибки не будет
+                salary_all += (employeeArray[i].getBaseSalary());
+            }
+        }
+        if (managerArray != null) {
+            for (int i = 0; i < managerArray.length; i++) {
+                salary_all += (managerArray[i].getSalaryManager());
+            }
+        }
+        if (directorArray != null) {
+            for (int i = 0; i < directorArray.length; i++) {
+                salary_all += (directorArray[i].getSalaryDirector());
+            }
+        }
+        return salary_all;
+    }
+
+//    * поиск наименьшей зарплаты в массиве (сделаем для 1 типа массивов)
+
+    static double searchMinSalary(Employee_2[] employeeArray) {
+        double min_salary = Double.MAX_VALUE;
+        for (int i = 0; i < employeeArray.length; i++) {
+            if (min_salary > employeeArray[i].getBaseSalary()) {
+                min_salary = employeeArray[i].getBaseSalary();
+            }
+        }
+//        if (min_salary == Double.MAX_VALUE) { // как сделать ретерн другого вида если зп ни у кого? надо изучать Дженерики
+//        } // но Java защищает от этого, если зп нет, то ее значение 0.0, поэтому не вернет Double.MAX_VALUE
+        return min_salary;
+    }
+
+
+
 
 }
