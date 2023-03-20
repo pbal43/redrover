@@ -74,9 +74,11 @@ public class Utils_2 {
 
     static double searchMinSalary(Employee_2[] employeeArray) {
         double min_salary = Double.MAX_VALUE;
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (min_salary > employeeArray[i].getBaseSalary()) {
-                min_salary = employeeArray[i].getBaseSalary();
+        if (employeeArray != null) {
+            for (int i = 0; i < employeeArray.length; i++) {
+                if (min_salary > employeeArray[i].getBaseSalary()) {
+                    min_salary = employeeArray[i].getBaseSalary();
+                }
             }
         }
 //        if (min_salary == Double.MAX_VALUE) { // как сделать ретерн другого вида если зп ни у кого? надо изучать Дженерики
@@ -92,9 +94,11 @@ public class Utils_2 {
 
     static double searchMaxSalary(Employee_2[] employeeArray) {
         double max_salary = 0.0; // меньше 0 не мб
-        for (int i = 0; i < employeeArray.length; i++) {
-            if (max_salary < employeeArray[i].getBaseSalary()) {
-                max_salary = employeeArray[i].getBaseSalary();
+        if (employeeArray != null) {
+            for (int i = 0; i < employeeArray.length; i++) {
+                if (max_salary < employeeArray[i].getBaseSalary()) {
+                    max_salary = employeeArray[i].getBaseSalary();
+                }
             }
         }
         return max_salary;
@@ -104,9 +108,11 @@ public class Utils_2 {
 
     static int searchMinNumberOfSubordinates(Manager_2[] managerArray) {
         int min_subordinates = Integer.MAX_VALUE;
-        for (int i = 0; i < managerArray.length; i++) {
-            if (min_subordinates > managerArray[i].getNumberOfSubordinates()) {
-                min_subordinates = managerArray[i].getNumberOfSubordinates();
+        if (managerArray != null) {
+            for (int i = 0; i < managerArray.length; i++) {
+                if (min_subordinates > managerArray[i].getNumberOfSubordinates()) {
+                    min_subordinates = managerArray[i].getNumberOfSubordinates();
+                }
             }
         }
         if (min_subordinates == Integer.MAX_VALUE) {
@@ -120,9 +126,11 @@ public class Utils_2 {
 
     static int searchNumberOfSubordinates(Manager_2[] managerArray) {
         int max_subordinates = 0; // меньше 0 не мб
-        for (int i = 0; i < managerArray.length; i++) {
-            if (max_subordinates < managerArray[i].getNumberOfSubordinates()) {
-                max_subordinates = managerArray[i].getNumberOfSubordinates();
+        if (managerArray != null) {
+            for (int i = 0; i < managerArray.length; i++) {
+                if (max_subordinates < managerArray[i].getNumberOfSubordinates()) {
+                    max_subordinates = managerArray[i].getNumberOfSubordinates();
+                }
             }
         }
         return max_subordinates;
@@ -130,14 +138,40 @@ public class Utils_2 {
 
 
 //    * поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
-//    тут изначально мб реализовать метод для расчета надбавки, но сделаем так как просят
+//    в классе менеджера изначально мб реализовать метод для расчета надбавки, но сделаем так как просят
 
-
+    static double calculateMaxExtraIncome(Manager_2[] managerArray) {
+        double max_extra_income = 0.0;
+        if (managerArray != null) {
+            for (int i = 0; i < managerArray.length; i++) {
+                double extra_income = managerArray[i].getSalaryManager() - managerArray[i].getBaseSalary();
+                if (max_extra_income < extra_income) {
+                    max_extra_income = extra_income;
+                }
+            }
+        }
+        return max_extra_income;
+    }
 
 
 
 //    * поиск наименьшей надбавки (разнице между базовой ставки и зарплатой) в массиве менеджеров
 
-
+    static double calculateMinExtraIncome(Manager_2[] managerArray) {
+        double min_extra_income = Double.MAX_VALUE;
+        if (managerArray != null) {
+            for (int i = 0; i < managerArray.length; i++) {
+                double extra_income = managerArray[i].getSalaryManager() - managerArray[i].getBaseSalary();
+                if (min_extra_income > extra_income) {
+                    min_extra_income = extra_income;
+                }
+            }
+        }
+        if (min_extra_income == Double.MAX_VALUE) {
+            return 0.0;
+        } else {
+            return min_extra_income;
+        }
+    }
 
 }
