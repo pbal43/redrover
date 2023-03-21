@@ -10,7 +10,7 @@ public class Utils_2 {
     // * поиск сотрудника в массиве по его имени
 
     // сработает по 1 вхождению
-    static Employee_2 searchByName(Employee_2[] employeeArray, String name) { // сделал статик, чтобы не вызывать экземпляр класса
+     public static Employee_2 searchByName(Employee_2[] employeeArray, String name) { // сделал статик, чтобы не вызывать экземпляр класса и public, чтобы можно было применять из другого пакета
         for (int i = 0; i < employeeArray.length; i++) {
             if (employeeArray[i].getName().toLowerCase().equals(name.toLowerCase())) {
                 return employeeArray[i];
@@ -22,7 +22,7 @@ public class Utils_2 {
     // * поиск сотрудника в массиве по вхождению указанной строки в его имени
 
     // сработает по 1 вхождению
-    static Employee_2 searchBySubstring(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
+    public static Employee_2 searchBySubstring(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
         for (int i = 0; i < employeeArray.length; i++) {
             if (employeeArray[i].getName().toLowerCase().contains(Substring.toLowerCase())) {
                 return employeeArray[i];
@@ -32,7 +32,7 @@ public class Utils_2 {
     }
 
     // изменим предыдущий метод, чтобы выдавал все вхождения
-    static Employee_2[] searchBySubstringAll(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
+    public static Employee_2[] searchBySubstringAll(Employee_2[] employeeArray, String Substring) { // сделал статик, чтобы не вызывать экземпляр класса
         List new_array_list = new ArrayList<>();
 //        int counter = 0;
         for (int i = 0; i < employeeArray.length; i++) {
@@ -50,7 +50,7 @@ public class Utils_2 {
 
     // * подсчет зарплатного бюджета для всех сотрудников в массиве
 
-    static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
+    public static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
         double salary_all = 0.0;
         if (employeeArray != null) { // надо бы учесть null-массив
             for (int i = 0; i < employeeArray.length; i++) { // тут если поле не заполнено с зп, ошибки не будет (возьмет 0)
@@ -72,7 +72,7 @@ public class Utils_2 {
 
 //    * поиск наименьшей зарплаты в массиве (сделаем для 1 типа массивов)
 
-    static double searchMinSalary(Employee_2[] employeeArray) {
+    public static double searchMinSalary(Employee_2[] employeeArray) {
         double min_salary = Double.MAX_VALUE;
         if (employeeArray != null) {
             for (int i = 0; i < employeeArray.length; i++) {
@@ -92,7 +92,7 @@ public class Utils_2 {
 
 //    * поиск наибольшей зарплаты в массиве
 
-    static double searchMaxSalary(Employee_2[] employeeArray) {
+    public static double searchMaxSalary(Employee_2[] employeeArray) {
         double max_salary = 0.0; // меньше 0 не мб
         if (employeeArray != null) {
             for (int i = 0; i < employeeArray.length; i++) {
@@ -106,7 +106,7 @@ public class Utils_2 {
 
 //    * поиск наименьшего количества подчиненных в массиве менеджеров ТЕСТЫ ОТСЮДА
 
-    static int searchMinNumberOfSubordinates(Manager_2[] managerArray) {
+    public static int searchMinNumberOfSubordinates(Manager_2[] managerArray) {
         int min_subordinates = Integer.MAX_VALUE;
         if (managerArray != null) {
             for (int i = 0; i < managerArray.length; i++) {
@@ -124,7 +124,7 @@ public class Utils_2 {
 
 //    * поиск наибольшего количества подчиненных в массиве менеджеров
 
-    static int searchNumberOfSubordinates(Manager_2[] managerArray) {
+    public static int searchNumberOfSubordinates(Manager_2[] managerArray) {
         int max_subordinates = 0; // меньше 0 не мб
         if (managerArray != null) {
             for (int i = 0; i < managerArray.length; i++) {
@@ -140,7 +140,7 @@ public class Utils_2 {
 //    * поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
 //    в классе менеджера изначально мб реализовать метод для расчета надбавки, но сделаем так как просят
 
-    static double calculateMaxExtraIncome(Manager_2[] managerArray) {
+    public static double calculateMaxExtraIncome(Manager_2[] managerArray) {
         double max_extra_income = 0.0;
         if (managerArray != null) {
             for (int i = 0; i < managerArray.length; i++) {
@@ -157,7 +157,7 @@ public class Utils_2 {
 
 //    * поиск наименьшей надбавки (разнице между базовой ставки и зарплатой) в массиве менеджеров
 
-    static double calculateMinExtraIncome(Manager_2[] managerArray) {
+    public static double calculateMinExtraIncome(Manager_2[] managerArray) {
         double min_extra_income = Double.MAX_VALUE;
         if (managerArray != null) {
             for (int i = 0; i < managerArray.length; i++) {
