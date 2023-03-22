@@ -20,4 +20,11 @@ public class Employee_hw_7 {
         }
     }
 
+    // или просто так
+
+    boolean isSameName_new(Employee_hw_7 employee) {
+        return name.equals(employee.name);
+    }
+
+
 }
