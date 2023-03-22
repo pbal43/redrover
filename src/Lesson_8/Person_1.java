@@ -11,7 +11,6 @@ public class Person_1 {
         public Person_1(String name, int age) { // конструктор - одноименный с классом, добавляется после полей
             this.name = name;
             this.age = age;
-
         }
 
         String getName() {
