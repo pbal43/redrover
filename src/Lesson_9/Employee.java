@@ -11,7 +11,10 @@ public class Employee extends Person{
 
     @Override // при перезаписывании метода надо указывать данную аннотацию (эт оверрайд) - правило хорошего тона
     public String getName() { // изменим метод getName в потомке (перезапишем)
-        return "New " + super.getName(); // обратимся к методу getName предка
+        return "New " + super.getName(); // обратимся к методу getName предка (раз перекрываем) - если без super - то метод будет обращатся сам к себе
     }
 
+    public int getSalary() {
+        return salary;
+    }
 }
