@@ -49,6 +49,7 @@ public class Utils_2 {
     }
 
     // * подсчет зарплатного бюджета для всех сотрудников в массиве
+    // можно улучшить - сделать через передачу 1 массива с разными типами (при приведении к 1), если перезаписывать метод getBaseSalary() в наследниках
 
     public static double calculateSalary(Employee_2[] employeeArray, Manager_2[] managerArray, Director_2[] directorArray) { // учтем зп как обычных сотрудников, так и менеджмента и директора
         double salary_all = 0.0;
