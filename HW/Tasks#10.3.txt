@@ -1,8 +1,8 @@
 ﻿Задачи
 
 
-https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7/train/java
-https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/java
-https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/java
-https://www.codewars.com/kata/58649884a1659ed6cb000072/train/java
-https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/java
+https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7/train/java +
+https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/java +
+https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/java +
+https://www.codewars.com/kata/58649884a1659ed6cb000072/train/java +
+https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/java +
